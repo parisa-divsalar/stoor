@@ -140,7 +140,7 @@ const UsersPage = () => {
             columns={columns}
             data={tableData}
             pagination
-            defaultRowsPerPage={5}
+            defaultRowsPerPage={10}
             rowsPerPageOptions={[5, 10, 25]}
             onRowClick={(row) => setSelectedUser(row.user)}
           />
