@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 32px;
   min-height: 100%;
-  border-radius: 28px;
+  border-radius: 20px;
   background: linear-gradient(180deg, #fdf2f8 0%, #eef2ff 50%, #ffffff 100%);
   border: 1px solid rgba(59, 130, 246, 0.2);
   box-shadow: 0 30px 60px rgba(15, 23, 42, 0.25);
@@ -111,6 +111,17 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+}
+
+.cardIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.15);
 }
 
 .cardTitle {

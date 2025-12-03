@@ -7,7 +7,9 @@ export const UsersRoot = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: theme.spacing(3),
+  borderRadius: '40px',
   backgroundColor: theme.palette.background.default,
+  border: '1px solid #ccc',
 }));
 
 export const PageTitle = styled(Box)(({ theme }) => ({

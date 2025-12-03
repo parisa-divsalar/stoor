@@ -98,7 +98,7 @@ const UsersPage = () => {
   return (
     <UsersRoot>
       <PageTitle>
-        <Typography component='h5' fontWeight='600'>
+        <Typography component='h5' fontWeight='700'>
           Users
         </Typography>
         <Typography color='text.secondary' variant='body2'>
