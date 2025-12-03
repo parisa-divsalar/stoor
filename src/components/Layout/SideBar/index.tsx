@@ -1,6 +1,6 @@
-import { Stack, Typography } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
+import { Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -33,15 +33,8 @@ const SideBar = () => {
                   color: isActive ? 'primary.main' : 'text.primary',
                 }}
               >
-                <item.Icon
-                  sx={{ color: isActive ? 'primary.main' : 'text.secondary' }}
-                  fontSize='small'
-                />
-                <Typography
-                  variant='body1'
-                  fontWeight={isActive ? 600 : 400}
-                  color='inherit'
-                >
+                <item.Icon sx={{ color: isActive ? 'primary.main' : 'text.secondary' }} fontSize='small' />
+                <Typography variant='body1' fontWeight={isActive ? 600 : 400} color='inherit'>
                   {item.label}
                 </Typography>
               </Stack>

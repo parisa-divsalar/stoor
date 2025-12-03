@@ -112,12 +112,7 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
   return (
     <Box sx={{ flexShrink: 0, ml: 2.5 }}>
       {/* Previous page ( < ) */}
-      <IconButton
-        onClick={handleBackButtonClick}
-        disabled={page === 0}
-        aria-label='previous page'
-        color='primary'
-      >
+      <IconButton onClick={handleBackButtonClick} disabled={page === 0} aria-label='previous page' color='primary'>
         <KeyboardArrowLeft />
       </IconButton>
 
@@ -225,7 +220,7 @@ const MuiTable = ({
               <StyledTableRow
                 key={rowIndex}
                 onClick={() => onRowClick?.(row)}
-                sx={(theme) => ({
+                sx={() => ({
                   cursor: onRowClick ? 'pointer' : 'default',
                   backgroundColor: rowIndex % 2 === 0 ? '#f2f5ff' : '#ffffff',
                 })}
