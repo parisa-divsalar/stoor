@@ -7,7 +7,7 @@ import { ThemeProvider } from '@/providers/theme';
 import '@/assets/styles/globals.css';
 
 export const metadata = {
-  title: 'z-cv',
+  title: 'stoor',
   description: 'description',
   themeColor: '#4D49FC',
   icons: {
