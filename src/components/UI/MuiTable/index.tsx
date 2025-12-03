@@ -79,9 +79,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5),
     fontSize: '14px',
-    fontWeight: 500,
-    color: theme.palette.text.primary,
-    backgroundColor: '#fff',
+    fontWeight: 600,
+    color: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette.primary.dark,
   },
 
   [theme.breakpoints.down('sm')]: {
@@ -225,7 +225,10 @@ const MuiTable = ({
               <StyledTableRow
                 key={rowIndex}
                 onClick={() => onRowClick?.(row)}
-                sx={{ cursor: onRowClick ? 'pointer' : 'default' }}
+                sx={(theme) => ({
+                  cursor: onRowClick ? 'pointer' : 'default',
+                  backgroundColor: rowIndex % 2 === 0 ? '#f2f5ff' : '#ffffff',
+                })}
               >
                 {columns.map((column) => {
                   const value = row[column.id];
