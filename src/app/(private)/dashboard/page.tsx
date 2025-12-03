@@ -2,6 +2,11 @@
 
 import { useEffect, useMemo } from 'react';
 
+import BusinessIcon from '@mui/icons-material/Business';
+import GroupsIcon from '@mui/icons-material/Groups';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import { Stack, Typography } from '@mui/material';
+
 import { ActivityChart, LatestUsersTable, StatsCard } from '@/components/dashboard';
 import { useUsersStore } from '@/store/users';
 
@@ -27,16 +32,25 @@ const DashboardPage = () => {
         label: 'Total Users',
         value: formatNumber(users.length),
         change: loading ? 'Loading user data…' : 'Based on live users',
+        icon: <GroupsIcon fontSize='small' />,
+        iconColor: '#1d4ed8',
+        iconBg: 'rgba(37, 99, 235, 0.15)',
       },
       {
         label: 'Active Cities',
         value: formatNumber(totalCities),
         change: totalCities ? 'Updated city count' : 'Gathering cities',
+        icon: <LocationCityIcon fontSize='small' />,
+        iconColor: '#059669',
+        iconBg: 'rgba(16, 185, 129, 0.15)',
       },
       {
         label: 'Companies',
         value: formatNumber(totalCompanies),
         change: totalCompanies ? 'Registered organizations' : 'Preparing list',
+        icon: <BusinessIcon fontSize='small' />,
+        iconColor: '#c026d3',
+        iconBg: 'rgba(192, 38, 211, 0.15)',
       },
     ],
     [loading, totalCities, totalCompanies, users.length],
@@ -73,10 +87,14 @@ const DashboardPage = () => {
   return (
     <section className={styles.root}>
       <header className={styles.header}>
-        <div>
-          <p className={styles.title}>Dashboard</p>
-          <p className={styles.description}>Overall stats, activity trends, and the newest accounts</p>
-        </div>
+        <Stack spacing={0.5}>
+          <Typography component='h5' fontWeight='700'>
+            Dashboard
+          </Typography>
+          <Typography component='h5' fontWeight='400'>
+            {styles.description}
+          </Typography>
+        </Stack>
         <span className={styles.eyebrow}>Preview release</span>
       </header>
 
